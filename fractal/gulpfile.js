@@ -44,11 +44,18 @@ const filePaths = {
 		src: ['./public/media/images/**/*.+(png|jpg|jpeg|gif)'],
 		dist: ['../craft/web/public/media/images']
 	},
+	graphic: {
+		src: ['./public/media/graphics/**/*.+(png|jpg|jpeg|gif|svg)'],
+		dist: ['../craft/web/public/media/graphics']
+	},
 	icon : {
 		src: ['./public/media/icons/**/*.svg'],
 		dist: ['../craft/web/public/media/icons']
 	},
-	favicon: './src/assets/favicon/**/*.+(png|ico)',
+	favicon: {
+		src: ['./public/media/favicons/**/*.+(png|ico)'],
+		dist: ['../craft/web/public/media/favicons']
+	},
 	readme: './src/assets/readme/**/*.png',
 }
 
@@ -57,8 +64,9 @@ notifier.defaults({
 	messages: {
 		scss: 'CSS compiled!',
 		js: "JS compiled!",
-		media: "Media assets optimized!",
+		image: "Images optimized!",
 		icon: "Icon sprite created!",
+		graphic: "Graphics optimized!",
 		fonts: "Fonts optimized!",
 		favicon: "Favicon optimized!",
 		readme: "Readme optimized!"
@@ -108,9 +116,17 @@ const scssTask = (done) => {
 const imageTask = (done) => {
 	gulp.src(filePaths.image.src)
 		.pipe(cache(imagemin()))
-		// .pipe(svgmin())
 		.pipe(dest(filePaths.image.dist[0]))
 		.pipe(notifier.success('image'))
+	done();
+}
+
+// GRAPHIC TASK
+const graphicTask = (done) => {
+	gulp.src(filePaths.graphic.src)
+		.pipe(cache(imagemin()))
+		.pipe(dest(filePaths.graphic.dist[0]))
+		.pipe(notifier.success('graphic'))
 	done();
 }
 
@@ -123,33 +139,32 @@ const iconTask = (done) => {
 	done();
 }
 
-
 // FAVICON TASK
-// const faviconTask = (done) => {
-// 	gulp.src(filesPath.favicon)
-// 		.pipe(favicons({
-// 			appName: 'Launch Countdown Timer',
-// 			appShortName: 'LCT',
-// 			appDescription: 'Compenent that countdown to a given time',
-// 			developerName: 'Jérôme Haas',
-// 			developerURL: 'jeromehaas.dev',
-// 			background: '#fff',
-// 			path: './assets/favicons/',
-// 			url: '',
-// 			display: 'standalone',
-// 			orientation: 'portrait',
-// 			scope: '/',
-// 			start_url: '/',
-// 			version: 1.0,
-// 			logging: false,
-// 			html: 'index.html',
-// 			pipeHTML: true,
-// 			replace: true,
-// 		}))
-// 		.pipe(gulp.dest('./assets/favicon/'))
-// 		.pipe(notifier.success('favicon'))
-// 	done();
-// };
+const faviconTask = (done) => {
+	gulp.src(filePaths.favicon.src)
+		.pipe(favicons({
+			appName: 'Gulp with Fractal Setup',
+			appShortName: 'LCT',
+			appDescription: 'Setup that that offers production ready components in Fractal and Craft',
+			developerName: 'Jérôme Haas',
+			developerURL: 'jeromehaas.dev',
+			background: '#fff',
+			path: './public/media/favicons/',
+			url: '',
+			display: 'standalone',
+			orientation: 'portrait',
+			scope: '/',
+			start_url: '/',
+			version: 1.0,
+			logging: false,
+			html: 'index.html',
+			pipeHTML: true,
+			replace: true,
+		}))
+		.pipe(gulp.dest(filePaths.favicon.dist[0]))
+		.pipe(notifier.success('favicon'))
+	done();
+};
 
 
 // WATCH TASK
@@ -161,11 +176,11 @@ const watchTask = () => {
 	gulp.watch('./index.html').on('change', browserSync.reload);
 	gulp.watch(filePaths.scss.src, scssTask).on("change", browserSync.reload);
 	gulp.watch(filePaths.js.src, jsTask).on("change", browserSync.reload);
-	// gulp.watch(filesPath.image.src, imageTask).on("change", browserSync.reload);
-	// gulp.watch(filesPath.fonts, fontTask).on("change", browserSync.reload);
+	gulp.watch(filePaths.image.src, imageTask).on("change", browserSync.reload);
+	gulp.watch(filePaths.fonts.src, fontTask).on("change", browserSync.reload);
 	// gulp.watch(filesPath.favicon, faviconTask).on("change", browserSync.reload);
 }
 
 // exports.build = parallel(scssTask, jsTask, imageTask, fontTask, faviconTask, readmeTask);
-exports.build = parallel(scssTask, fontTask, jsTask, imageTask, iconTask);
+exports.build = parallel(scssTask, fontTask, jsTask, imageTask, iconTask, graphicTask, faviconTask);
 exports.default = series(exports.build, watchTask);
