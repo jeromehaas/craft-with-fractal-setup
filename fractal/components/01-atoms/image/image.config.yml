@@ -1,0 +1,4 @@
+name: Image
+context: 
+  src: /media/images/clean-code.jpg
+  alt: clean code
