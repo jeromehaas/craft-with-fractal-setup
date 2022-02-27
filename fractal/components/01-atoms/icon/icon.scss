@@ -1,4 +1,7 @@
-.red * {
-	fill: red !important;
-	stroke: red !important;
+%svg-common {
+	background-image: url("/media/icons/sprite/sprite.svg");
+}
+
+svg {
+	fill: red;
 }

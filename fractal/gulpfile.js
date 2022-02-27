@@ -21,7 +21,7 @@ const svgSprite = require('gulp-svg-sprite');
 // SOURCE PATHS
 const filePaths = {
 	scss: {
-		src: ['./public/scss/configs/reset.scss', './public/scss/configs/fonts.scss', './public/scss/configs/variables.scss', './public/scss/configs/typography.scss', './public/scss/configs/mixins.scss', './public/scss/configs/global.scss', './public/media/icons/sprite/view/sprite.scss', './components/**/*.scss'],
+		src: ['./public/scss/configs/reset.scss', './public/scss/configs/fonts.scss', './public/scss/configs/variables.scss', './public/scss/configs/typography.scss', './public/scss/configs/mixins.scss', './public/scss/configs/global.scss', './public/media/icons/sprite/sprite.scss', './components/**/*.scss'],
 		dist: ['./public/css', '../craft/web/public/css']
 	},
 	fonts: {
@@ -74,7 +74,7 @@ notifier.defaults({
 
 // SCSS
 const scssTask = (done) => {
-	gulp.src(filePaths.scss.src)
+	gulp.src(filePaths.scss.src, {"allowEmpty": true})
 	.pipe(plumber({errorHandler: notifier.error}))
 	.pipe(concat('main.min.css'))
 	.pipe(sourcemaps.init())
@@ -137,12 +137,14 @@ const iconTask = (done) => {
 
 // ICON SPRITE TASK
 const iconSpriteTask = (done) => {
-	gulp.src(filePaths.iconSprite.src)
+	gulp.src(filePaths.iconSprite.src, {"allowEmpty": true})
 		.pipe(svgmin())
 		.pipe(svgSprite({
 			mode: {
-        view: { 
-					sprite: '/media/icons/sprite/view/sprite.svg',
+        css: { 
+					dest: '.',
+					sprite: 'sprite.svg',
+					
 					bust: false,
 					render: {
               scss: true,
