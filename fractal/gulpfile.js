@@ -21,15 +21,7 @@ const svgSprite = require('gulp-svg-sprite');
 // SOURCE PATHS
 const filePaths = {
 	scss: {
-		src: [
-			'./public/scss/configs/reset.scss', 
-			'./public/scss/configs/fonts.scss', 
-			'./public/scss/configs/variables.scss', 
-			'./public/scss/configs/typography.scss', 
-			'./public/scss/configs/mixins.scss', 
-			'./public/scss/configs/global.scss', 
-			'./components/**/*.scss'
-		],
+		src: ['./public/scss/configs/reset.scss', './public/scss/configs/fonts.scss', './public/scss/configs/variables.scss', './public/scss/configs/typography.scss', './public/scss/configs/mixins.scss', './public/scss/configs/global.scss', './public/media/icons/sprite/view/sprite.scss', './components/**/*.scss'],
 		dist: ['./public/css', '../craft/web/public/css']
 	},
 	fonts: {
@@ -52,11 +44,14 @@ const filePaths = {
 		src: ['./public/media/icons/**/*.svg'],
 		dist: ['../craft/web/public/media/icons']
 	},
+	iconSprite : {
+		src: ['./public/media/icons/**/*.svg'],
+		dist: ['./public/media/icons/sprite', '../craft/web/public/media/icons/sprite']
+	},
 	favicon: {
 		src: ['./public/media/favicons/**/*.+(png|ico)'],
 		dist: ['../craft/web/public/media/favicons']
-	},
-	readme: './src/assets/readme/**/*.png',
+	}
 }
 
 // MESSAGES FOR NOTIFIER
@@ -65,6 +60,7 @@ notifier.defaults({
 		scss: 'CSS compiled!',
 		js: "JS compiled!",
 		image: "Images optimized!",
+		icon: "Icons created!",
 		icon: "Icon sprite created!",
 		graphic: "Graphics optimized!",
 		fonts: "Fonts optimized!",
@@ -139,6 +135,27 @@ const iconTask = (done) => {
 	done();
 }
 
+// ICON SPRITE TASK
+const iconSpriteTask = (done) => {
+	gulp.src(filePaths.iconSprite.src)
+		.pipe(svgmin())
+		.pipe(svgSprite({
+			mode: {
+        view: { 
+					sprite: '/media/icons/sprite/view/sprite.svg',
+					bust: false,
+					render: {
+              scss: true,
+              css: true
+            }
+        }
+    }
+	}))
+		.pipe(dest(filePaths.iconSprite.dist[0]))
+		.pipe(notifier.success('iconSprite'))
+	done();
+}
+
 // FAVICON TASK
 const faviconTask = (done) => {
 	gulp.src(filePaths.favicon.src)
@@ -176,11 +193,7 @@ const watchTask = () => {
 	gulp.watch('./index.html').on('change', browserSync.reload);
 	gulp.watch(filePaths.scss.src, scssTask).on("change", browserSync.reload);
 	gulp.watch(filePaths.js.src, jsTask).on("change", browserSync.reload);
-	gulp.watch(filePaths.image.src, imageTask).on("change", browserSync.reload);
-	gulp.watch(filePaths.fonts.src, fontTask).on("change", browserSync.reload);
-	// gulp.watch(filesPath.favicon, faviconTask).on("change", browserSync.reload);
 }
 
-// exports.build = parallel(scssTask, jsTask, imageTask, fontTask, faviconTask, readmeTask);
-exports.build = parallel(scssTask, fontTask, jsTask, imageTask, iconTask, graphicTask, faviconTask);
+exports.build = parallel(iconSpriteTask, scssTask, fontTask, jsTask, imageTask, iconTask, graphicTask, faviconTask);
 exports.default = series(exports.build, watchTask);

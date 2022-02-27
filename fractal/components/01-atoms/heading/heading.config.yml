@@ -1,0 +1,27 @@
+name: Heading
+context:
+  text: This is a H1
+  type: h1
+  lookLike: h1
+  class: ''
+variants:
+- name: h1
+  context:
+    text: This is a H1
+    type: h1
+    lookLike: h1
+- name: h2
+  context:
+    text: This is a H2
+    type: h2
+    lookLike: h2
+- name: h3
+  context:
+    text: This is a H3
+    type: h3
+    lookLike: h3
+- name: h4
+  context:
+    text: This is a H4
+    type: h4
+    lookLike: h4

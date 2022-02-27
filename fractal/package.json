@@ -31,7 +31,7 @@
 	},
 	"scripts": {
     "start": "concurrently --kill-others \"npm run gulp\" \"npm run fractal:start\"",
-		"fractal:start": "fractal start --sync",
+		"fractal:start": "fractal start --sync --port 3005",
 		"fractal:build": "fractal build",
 		"gulp": "gulp"
 	}

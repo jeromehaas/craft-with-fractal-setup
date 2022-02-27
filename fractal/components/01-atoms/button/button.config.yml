@@ -1,0 +1,12 @@
+name: Button
+context:
+  color: green
+  text: Button
+  class: ''
+variants:
+- name: green
+  context:
+    color: green
+- name: white
+  context:
+    color: white

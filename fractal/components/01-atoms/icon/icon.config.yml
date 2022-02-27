@@ -1,0 +1,14 @@
+name: Icon
+context:
+  icon: check 
+  class: 
+variants:
+- name: Check
+  context:
+    icon: check
+- name: Close
+  context:
+    icon: 'close'
+- name: Arrow Simple
+  context:
+    icon: 'arrow-simple'

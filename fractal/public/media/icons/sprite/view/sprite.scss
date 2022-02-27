@@ -1,0 +1,44 @@
+%svg-common {
+	background: url("../../../../../../../media/icons/sprite/view/sprite.svg") no-repeat;
+}
+
+.svg-general--arrow-simple {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+
+.svg-general--arrow-simple-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.svg-general--check {
+	@extend %svg-common;
+	background-position: 16.666666666666668% 100%;
+}
+
+.svg-general--check-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.svg-general--close {
+	@extend %svg-common;
+	background-position: 33.333333333333336% 100%;
+}
+
+.svg-general--close-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.svg-sprite--view--sprite {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-sprite--view--sprite-dims {
+	width: 168px;
+	height: 144px;
+}
+
