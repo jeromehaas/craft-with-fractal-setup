@@ -16,16 +16,7 @@ const notifier = require('gulp-notifier');
 const svgmin = require('gulp-svgmin');
 const sass = require('gulp-sass')(require('sass'));
 const favicons = require('gulp-favicons');
-
-// FILE PATHS
-// const filesPath = {
-// 	scss: ['./components/**/**/*.scss', './styles/scss/**/*.scss'],
-// 	graphics: './src/assets/graphics/**/*.+(png|jpg|gif|svg)',
-// 	favicon: './src/assets/favicon/**/*.+(png|ico)',
-// 	fonts: './src/assets/fonts/**/*.+(ttf|woff|woff2)',
-// 	js: './src/js/**/*.js',
-// 	readme: './src/assets/readme/**/*.png',
-// }
+const svgSprite = require('gulp-svg-sprite');
 
 // SOURCE PATHS
 const filePaths = {
@@ -49,7 +40,14 @@ const filePaths = {
 		src: ['./components/**/**/*.js'],
 		dist: ['./public/js', '../craft/web/public/js']
 	},
-	graphics: './src/assets/graphics/**/*.+(png|jpg|gif|svg)',
+	image: {
+		src: ['./public/media/images/**/*.+(png|jpg|jpeg|gif)'],
+		dist: ['../craft/web/public/media/images']
+	},
+	icon : {
+		src: ['./public/media/icons/**/*.svg'],
+		dist: ['../craft/web/public/media/icons']
+	},
 	favicon: './src/assets/favicon/**/*.+(png|ico)',
 	readme: './src/assets/readme/**/*.png',
 }
@@ -59,8 +57,8 @@ notifier.defaults({
 	messages: {
 		scss: 'CSS compiled!',
 		js: "JS compiled!",
-		graphics: "Graphics optimized!",
-		icons: "Icons optimized!",
+		media: "Media assets optimized!",
+		icon: "Icon sprite created!",
 		fonts: "Fonts optimized!",
 		favicon: "Favicon optimized!",
 		readme: "Readme optimized!"
@@ -94,7 +92,6 @@ const scssTask = (done) => {
 
 	// JS TASK
 	const jsTask = (done) => {
-			// gulp.src(['./src/js/timer.js', './src/js/stars.js'])
 			gulp.src(filePaths.js.src)
 				.pipe(plumber({ errorHandler: notifier.error }))
 				.pipe(babel({ presets: ['@babel/env'] }))
@@ -107,24 +104,25 @@ const scssTask = (done) => {
 	done();
 }
 
-// GRAPHICS TASK
-// const graphicsTask = (done) => {
-// 	gulp.src(filesPath.graphics)
-// 		.pipe(cache(imagemin()))
-// 		.pipe(svgmin())
-// 		.pipe(dest('./assets/graphics/'))
-// 		.pipe(notifier.success('graphics'))
-// 	done();
-// }
+// IMAGE TASK
+const imageTask = (done) => {
+	gulp.src(filePaths.image.src)
+		.pipe(cache(imagemin()))
+		// .pipe(svgmin())
+		.pipe(dest(filePaths.image.dist[0]))
+		.pipe(notifier.success('image'))
+	done();
+}
 
-// README TASK
-// const readmeTask = (done) => {
-// 	gulp.src(filesPath.readme)
-// 		.pipe(cache(imagemin()))
-// 		.pipe(dest('./assets/readme/'))
-// 		.pipe(notifier.success('readme'))
-// 	done();
-// }
+// ICON TASK
+const iconTask = (done) => {
+	gulp.src(filePaths.icon.src)
+		.pipe(svgmin())
+		.pipe(dest(filePaths.icon.dist[0]))
+		.pipe(notifier.success('icon'))
+	done();
+}
+
 
 // FAVICON TASK
 // const faviconTask = (done) => {
@@ -163,11 +161,11 @@ const watchTask = () => {
 	gulp.watch('./index.html').on('change', browserSync.reload);
 	gulp.watch(filePaths.scss.src, scssTask).on("change", browserSync.reload);
 	gulp.watch(filePaths.js.src, jsTask).on("change", browserSync.reload);
-	// gulp.watch(filesPath.graphics, graphicsTask).on("change", browserSync.reload);
+	// gulp.watch(filesPath.image.src, imageTask).on("change", browserSync.reload);
 	// gulp.watch(filesPath.fonts, fontTask).on("change", browserSync.reload);
 	// gulp.watch(filesPath.favicon, faviconTask).on("change", browserSync.reload);
 }
 
-// exports.build = parallel(scssTask, jsTask, graphicsTask, fontTask, faviconTask, readmeTask);
-exports.build = parallel(scssTask, fontTask, jsTask);
+// exports.build = parallel(scssTask, jsTask, imageTask, fontTask, faviconTask, readmeTask);
+exports.build = parallel(scssTask, fontTask, jsTask, imageTask, iconTask);
 exports.default = series(exports.build, watchTask);
