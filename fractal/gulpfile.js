@@ -30,16 +30,27 @@ const favicons = require('gulp-favicons');
 // SOURCE PATHS
 const filePaths = {
 	scss: {
-		src: ['./components/**/**/*.scss', './public/scss/**/*.scss'],
+		src: [
+			'./public/scss/configs/reset.scss', 
+			'./public/scss/configs/fonts.scss', 
+			'./public/scss/configs/variables.scss', 
+			'./public/scss/configs/typography.scss', 
+			'./public/scss/configs/mixins.scss', 
+			'./public/scss/configs/global.scss', 
+			'./components/**/*.scss'
+		],
 		dist: ['./public/css', '../craft/web/public/css']
 	},
 	fonts: {
 		src: ['./public/fonts/**/*.+(ttf|woff|woff2)'],
 		dist: ['../craft/web/public/fonts']
 	},
+	js: {
+		src: ['./components/**/**/*.js'],
+		dist: ['./public/js', '../craft/web/public/js']
+	},
 	graphics: './src/assets/graphics/**/*.+(png|jpg|gif|svg)',
 	favicon: './src/assets/favicon/**/*.+(png|ico)',
-	js: './src/js/**/*.js',
 	readme: './src/assets/readme/**/*.png',
 }
 
@@ -63,15 +74,15 @@ notifier.defaults({
 const scssTask = (done) => {
 	gulp.src(filePaths.scss.src)
 	.pipe(plumber({errorHandler: notifier.error}))
-	.pipe(concat('main.css'))
+	.pipe(concat('main.min.css'))
 	.pipe(sourcemaps.init())
-		.pipe(sass())
-		.pipe(cssnano())
-		.pipe(sourcemaps.write('.'))
-		.pipe(dest(filePaths.scss.dist[0]))
-		.pipe(notifier.success('scss'));
-		done();
-	}
+	.pipe(sass())
+	.pipe(cssnano())
+	.pipe(sourcemaps.write('.'))
+	.pipe(dest(filePaths.scss.dist[0]))
+	.pipe(notifier.success('scss'));
+	done();
+}
 	
 	// FONT TASK
 	const fontTask = (done) => {
@@ -80,18 +91,21 @@ const scssTask = (done) => {
 			.pipe(notifier.success('fonts'))
 		done();
 	}
+
 	// JS TASK
-	// const jsTask = (done) => {
-		// 	gulp.src(['./src/js/timer.js', './src/js/stars.js'])
-		// 		.pipe(plumber({ errorHandler: notifier.error }))
-		// 		.pipe(babel({ presets: ['@babel/env'] }))
-		// 		.pipe(concat('main.js'))
-		// 		.pipe(uglify())
-// 		.pipe(rename({ suffix: '.min' }))
-// 		.pipe(dest('./js'))
-// 		.pipe(notifier.success('js'))
-// 	done();
-// }
+	const jsTask = (done) => {
+			// gulp.src(['./src/js/timer.js', './src/js/stars.js'])
+			gulp.src(filePaths.js.src)
+				.pipe(plumber({ errorHandler: notifier.error }))
+				.pipe(babel({ presets: ['@babel/env'] }))
+				.pipe(concat('main.js'))
+				.pipe(uglify())
+		.pipe(rename({ suffix: '.min' }))
+		.pipe(dest(filePaths.js.dist[0]))
+		.pipe(dest(filePaths.js.dist[1]))
+		.pipe(notifier.success('js'))
+	done();
+}
 
 // GRAPHICS TASK
 // const graphicsTask = (done) => {
@@ -147,13 +161,13 @@ const watchTask = () => {
 		open: false
 	});
 	gulp.watch('./index.html').on('change', browserSync.reload);
-	gulp.watch(filesPath.scss, scssTask).on("change", browserSync.reload);
-	// gulp.watch(filesPath.js, jsTask).on("change", browserSync.reload);
+	gulp.watch(filePaths.scss.src, scssTask).on("change", browserSync.reload);
+	gulp.watch(filePaths.js.src, jsTask).on("change", browserSync.reload);
 	// gulp.watch(filesPath.graphics, graphicsTask).on("change", browserSync.reload);
 	// gulp.watch(filesPath.fonts, fontTask).on("change", browserSync.reload);
 	// gulp.watch(filesPath.favicon, faviconTask).on("change", browserSync.reload);
 }
 
 // exports.build = parallel(scssTask, jsTask, graphicsTask, fontTask, faviconTask, readmeTask);
-exports.build = parallel(scssTask, fontTask);
+exports.build = parallel(scssTask, fontTask, jsTask);
 exports.default = series(exports.build, watchTask);

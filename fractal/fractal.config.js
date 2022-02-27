@@ -11,9 +11,9 @@ fractal.set('project.version', 'v1.0');
 fractal.set('project.author', 'jeromehaas');
 
 /* Set the engines */
-const twigAdapter = require('@frctl/twig')();
-fractal.docs.engine(twigAdapter);
-fractal.components.engine(twigAdapter);
+// const twigAdapter = require('@frctl/twig')();
+// // fractal.docs.engine(twigAdapter);
+// // fractal.components.engine(twigAdapter);
 
 /* Tell Fractal where the components will live */
 fractal.components.set('path', __dirname + '/components');
