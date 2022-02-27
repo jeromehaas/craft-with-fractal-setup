@@ -144,7 +144,6 @@ const iconSpriteTask = (done) => {
         css: { 
 					dest: '.',
 					sprite: 'sprite.svg',
-					
 					bust: false,
 					render: {
               scss: true,

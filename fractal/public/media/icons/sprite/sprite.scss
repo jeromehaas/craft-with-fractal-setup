@@ -2,9 +2,19 @@
 	background: url("sprite.svg") no-repeat;
 }
 
+.svg-general--arrow-link {
+	@extend %svg-common;
+	background-position: 88.23529411764706% 67.9245283018868%;
+}
+
+.svg-general--arrow-link-dims {
+	width: 8px;
+	height: 14px;
+}
+
 .svg-general--arrow-simple {
 	@extend %svg-common;
-	background-position: 0 0;
+	background-position: 100% 0;
 }
 
 .svg-general--arrow-simple-dims {
@@ -14,7 +24,7 @@
 
 .svg-general--check {
 	@extend %svg-common;
-	background-position: 100% 0;
+	background-position: 100% 25%;
 }
 
 .svg-general--check-dims {
@@ -24,11 +34,21 @@
 
 .svg-general--close {
 	@extend %svg-common;
-	background-position: 0 100%;
+	background-position: 100% 50%;
 }
 
 .svg-general--close-dims {
 	width: 24px;
 	height: 24px;
+}
+
+.svg-sprite--sprite {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-sprite--sprite-dims {
+	width: 120px;
+	height: 120px;
 }
 

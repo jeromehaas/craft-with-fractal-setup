@@ -1,0 +1,30 @@
+.link {
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	text-decoration:  none;
+	
+	&:hover {
+
+		.link__arrow {
+			margin-left: 6px;
+			display: block;
+		}
+	
+	}
+	
+	&__text {
+		margin-right: 8px;
+		font-family: 'Roboto-Regular';
+	}
+
+	&__arrow  {
+		width: 16px;
+		height: 16px;
+		object-fit: contain;
+		transition: all 0.1s ease;
+	}
+
+}
