@@ -1,5 +1,5 @@
 .svg-general--arrow-link {
-	background: url("sprite.svg") 75.60975609756098% 88.59060402684564% no-repeat;
+	background: url("sprite.svg") 96.54255319148936% 16.107382550335572% no-repeat;
 }
 
 .svg-general--arrow-link-dims {
@@ -8,7 +8,7 @@
 }
 
 .svg-general--arrow-simple {
-	background: url("sprite.svg") 48.717948717948715% 91.66666666666667% no-repeat;
+	background: url("sprite.svg") 93.33333333333333% 50% no-repeat;
 }
 
 .svg-general--arrow-simple-dims {
@@ -17,7 +17,7 @@
 }
 
 .svg-general--check {
-	background: url("sprite.svg") 56.41025641025641% 91.66666666666667% no-repeat;
+	background: url("sprite.svg") 100% 50% no-repeat;
 }
 
 .svg-general--check-dims {
@@ -26,7 +26,7 @@
 }
 
 .svg-general--close {
-	background: url("sprite.svg") 64.1025641025641% 91.66666666666667% no-repeat;
+	background: url("sprite.svg") 93.33333333333333% 58.333333333333336% no-repeat;
 }
 
 .svg-general--close-dims {
@@ -35,7 +35,7 @@
 }
 
 .svg-social-media--facebook {
-	background: url("sprite.svg") 15.533980582524272% 91.66666666666667% no-repeat;
+	background: url("sprite.svg") 94.11764705882354% 16.666666666666668% no-repeat;
 }
 
 .svg-social-media--facebook-dims {
@@ -44,7 +44,7 @@
 }
 
 .svg-social-media--github {
-	background: url("sprite.svg") 24.193548387096776% 91.66666666666667% no-repeat;
+	background: url("sprite.svg") 93.85474860335195% 25% no-repeat;
 }
 
 .svg-social-media--github-dims {
@@ -53,7 +53,7 @@
 }
 
 .svg-social-media--instagram {
-	background: url("sprite.svg") 40.836012861736336% 91.66666666666667% no-repeat;
+	background: url("sprite.svg") 93.59331476323119% 41.666666666666664% no-repeat;
 }
 
 .svg-social-media--instagram-dims {
@@ -62,7 +62,7 @@
 }
 
 .svg-social-media--linkedin {
-	background: url("sprite.svg") 71.7948717948718% 91.66666666666667% no-repeat;
+	background: url("sprite.svg") 100% 58.333333333333336% no-repeat;
 }
 
 .svg-social-media--linkedin-dims {
@@ -71,7 +71,7 @@
 }
 
 .svg-social-media--twitter {
-	background: url("sprite.svg") 32.58064516129032% 91.66666666666667% no-repeat;
+	background: url("sprite.svg") 93.85474860335195% 33.333333333333336% no-repeat;
 }
 
 .svg-social-media--twitter-dims {
@@ -80,7 +80,7 @@
 }
 
 .svg-social-media--youtube {
-	background: url("sprite.svg") 0 100% no-repeat;
+	background: url("sprite.svg") 100% 0 no-repeat;
 }
 
 .svg-social-media--youtube-dims {
@@ -94,6 +94,6 @@
 
 .svg-sprite--sprite-dims {
 	width: 336px;
-	height: 264px;
+	height: 312px;
 }
 

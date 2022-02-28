@@ -1,0 +1,11 @@
+name: Radio
+context: 
+  options: 
+    - item: 
+      text: Option A
+      name: option
+      value: a
+    - item: 
+      text: Option B
+      name: option
+      value: b

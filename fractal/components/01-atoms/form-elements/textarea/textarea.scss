@@ -1,0 +1,13 @@
+.textarea {
+
+	@include form-field;
+		
+		&--error {
+			@include form-field--error;
+		}
+		
+		&--hidden {
+			@include hidden;
+		}
+
+}
