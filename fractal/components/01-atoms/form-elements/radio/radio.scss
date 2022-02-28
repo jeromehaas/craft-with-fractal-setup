@@ -16,20 +16,20 @@
 	&__input {
 		width: 25px;
     height: 25px;
-    background-color: #ffffff;
+		background-color: $input-background-color;
     border-radius: 50px;
     appearance: none;
     vertical-align: bottom;
-    margin-right: 15px;
+    margin-right: 16px;
     background-image: url('/media/icons/form-elements/radio-bullet.svg');
     background-size: 0px;
     background-position: center;
     transition: background-size 50ms ease;
     background-repeat: no-repeat;
-		border: 1px solid $black;
+		border: $input-border;
 
 		&:checked {
-			background-size: 15px;
+			background-size: 11px;
 		}
 
 	}

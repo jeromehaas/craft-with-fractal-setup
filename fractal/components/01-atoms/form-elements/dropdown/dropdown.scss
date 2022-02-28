@@ -1,0 +1,62 @@
+.dropdown {
+
+	&__input {
+		background-color: $input-background-color;
+		border-radius: $input-border-radius;
+		padding: $input-padding;
+		outline: $input-outline;
+		margin: $input-margin;
+		width: $input-width;
+		border: $input-border;
+		display: block;
+		position: relative;
+
+		&::after {
+			content: "";
+			width: 12px;
+			height: 6px;
+			position: absolute;
+			right: 12px;
+			top: 18px;
+			background: url('/media/icons/form-elements/dropdown-carret.svg') no-repeat;
+		}
+	}
+
+	&__checkbox {
+		display: none;
+
+		&:checked + .dropdown__options {
+			display: flex;
+		}
+		
+	}
+	
+	&__options {
+		display: none;
+		border: $input-border;
+		border-radius: $input-border-radius;
+		flex-direction: column;
+		overflow: hidden;
+	}
+
+	&__option, .option {
+		
+		&__input {
+			border: $input-border;
+			display: none;
+		}
+
+		&__label {
+			display: block;
+			padding: $input-padding;
+			background-color: $white;
+
+			&:hover {
+				background-color: $grey;
+			}
+		
+		}
+
+	}
+	
+}

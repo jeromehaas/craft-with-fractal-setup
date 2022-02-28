@@ -2,9 +2,29 @@
 	background: url("sprite.svg") no-repeat;
 }
 
+.svg-form-elements--dropdown-carret {
+	@extend %svg-common;
+	background-position: 73.79679144385027% 88.13559322033899%;
+}
+
+.svg-form-elements--dropdown-carret-dims {
+	width: 10px;
+	height: 6px;
+}
+
+.svg-form-elements--radio-bullet {
+	@extend %svg-common;
+	background-position: 68.13186813186813% 91.76470588235294%;
+}
+
+.svg-form-elements--radio-bullet-dims {
+	width: 20px;
+	height: 20px;
+}
+
 .svg-general--arrow-link {
 	@extend %svg-common;
-	background-position: 96.54255319148936% 16.107382550335572%;
+	background-position: 71.27659574468085% 90.17341040462428%;
 }
 
 .svg-general--arrow-link-dims {
@@ -14,7 +34,7 @@
 
 .svg-general--arrow-simple {
 	@extend %svg-common;
-	background-position: 93.33333333333333% 50%;
+	background-position: 42.22222222222222% 92.85714285714286%;
 }
 
 .svg-general--arrow-simple-dims {
@@ -24,7 +44,7 @@
 
 .svg-general--check {
 	@extend %svg-common;
-	background-position: 100% 50%;
+	background-position: 48.888888888888886% 92.85714285714286%;
 }
 
 .svg-general--check-dims {
@@ -34,7 +54,7 @@
 
 .svg-general--close {
 	@extend %svg-common;
-	background-position: 93.33333333333333% 58.333333333333336%;
+	background-position: 55.55555555555556% 92.85714285714286%;
 }
 
 .svg-general--close-dims {
@@ -44,7 +64,7 @@
 
 .svg-social-media--facebook {
 	@extend %svg-common;
-	background-position: 94.11764705882354% 16.666666666666668%;
+	background-position: 13.445378151260504% 92.85714285714286%;
 }
 
 .svg-social-media--facebook-dims {
@@ -54,7 +74,7 @@
 
 .svg-social-media--github {
 	@extend %svg-common;
-	background-position: 93.85474860335195% 25%;
+	background-position: 20.949720670391063% 92.85714285714286%;
 }
 
 .svg-social-media--github-dims {
@@ -64,7 +84,7 @@
 
 .svg-social-media--instagram {
 	@extend %svg-common;
-	background-position: 93.59331476323119% 41.666666666666664%;
+	background-position: 35.37604456824513% 92.85714285714286%;
 }
 
 .svg-social-media--instagram-dims {
@@ -74,7 +94,7 @@
 
 .svg-social-media--linkedin {
 	@extend %svg-common;
-	background-position: 100% 58.333333333333336%;
+	background-position: 62.22222222222222% 92.85714285714286%;
 }
 
 .svg-social-media--linkedin-dims {
@@ -84,7 +104,7 @@
 
 .svg-social-media--twitter {
 	@extend %svg-common;
-	background-position: 93.85474860335195% 33.333333333333336%;
+	background-position: 28.212290502793294% 92.85714285714286%;
 }
 
 .svg-social-media--twitter-dims {
@@ -94,7 +114,7 @@
 
 .svg-social-media--youtube {
 	@extend %svg-common;
-	background-position: 100% 0;
+	background-position: 0 100%;
 }
 
 .svg-social-media--youtube-dims {
@@ -108,7 +128,7 @@
 }
 
 .svg-sprite--sprite-dims {
-	width: 336px;
+	width: 384px;
 	height: 312px;
 }
 

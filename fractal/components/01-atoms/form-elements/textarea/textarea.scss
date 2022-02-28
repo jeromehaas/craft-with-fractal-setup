@@ -1,9 +1,16 @@
 .textarea {
 
-	@include form-field;
-		
+	background-color: $input-background-color;
+	border-radius: $input-border-radius;
+	padding: $input-padding;
+	outline: $input-outline;
+	margin: $input-margin;
+	width: $input-width;
+	border: $input-border;
+	resize: none;	
+
 		&--error {
-			@include form-field--error;
+			border-color: $red !important;
 		}
 		
 		&--hidden {

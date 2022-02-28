@@ -1,9 +1,15 @@
 .input {
 
-	@include form-field;
+	background-color: $input-background-color;
+	border-radius: $input-border-radius;
+	padding: $input-padding;
+	outline: $input-outline;
+	margin-bottom: $input-margin;
+	width: $input-width;
+	border: $input-border;
 		
 		&--error {
-			@include form-field--error;
+			border-color: $red !important;
 		}
 		
 		&--hidden {

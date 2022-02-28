@@ -1,0 +1,15 @@
+<div class="dropdown js-dropdown {{ class }}">
+		{{> @label name="option" class="dropdown__label"}}
+		<label class="dropdown__input" for="{{ name }}">
+			{{ placeholder }}
+		</label>
+		<input class="dropdown__checkbox" type="checkbox" name="{{ name }}" id="{{ name }}" >
+		<div class="dropdown__options">
+  		{{#each options}}
+				<span class="dropdown__option option">	
+					<input class="option__input" name="{{ name }}" type='radio' value="{{ value }}" id="{{ name }}" />
+					<label class="option__label"for="{{ name }}">{{ text }}</label>
+				</span>
+  		{{/each}}
+		</div>
+</div>

@@ -1,4 +1,5 @@
 class Hamburger {
+	
 	constructor() {
 		this.name = 'hamburger';
 		this.elements = {
