@@ -1,0 +1,12 @@
+.social-media-icons {
+
+	&__link {
+		display: inline-block;
+		
+		&:not(:last-of-type) {
+			margin-right: 16px;
+		}
+
+	}
+
+}

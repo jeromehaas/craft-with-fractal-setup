@@ -189,7 +189,8 @@ const faviconTask = (done) => {
 const watchTask = () => {
 	browserSync.init({
 		server: { baseDir: './' },
-		open: false
+		open: false,
+		port: 3007
 	});
 	gulp.watch('./index.html').on('change', browserSync.reload);
 	gulp.watch(filePaths.scss.src, scssTask).on("change", browserSync.reload);

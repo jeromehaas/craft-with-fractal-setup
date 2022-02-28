@@ -1,14 +1,22 @@
 name: Icon
 context:
-  icon: check 
-  class: 
+  icon: check
+  folder: general 
 variants:
 - name: Check
   context:
     icon: check
+    folder: general 
 - name: Close
   context:
-    icon: 'close'
+    icon: close
+    folder: general 
+  folder: general 
 - name: Arrow Simple
   context:
-    icon: 'arrow-simple'
+    icon: arrow-simple
+    folder: general 
+- name: Arrow Link
+  context:
+    icon: arrow-link
+    folder: general 

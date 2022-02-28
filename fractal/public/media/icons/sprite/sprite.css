@@ -1,5 +1,5 @@
 .svg-general--arrow-link {
-	background: url("sprite.svg") 88.23529411764706% 67.9245283018868% no-repeat;
+	background: url("sprite.svg") 88.57142857142857% 86.4% no-repeat;
 }
 
 .svg-general--arrow-link-dims {
@@ -8,7 +8,7 @@
 }
 
 .svg-general--arrow-simple {
-	background: url("sprite.svg") 100% 0 no-repeat;
+	background: url("sprite.svg") 57.57575757575758% 90% no-repeat;
 }
 
 .svg-general--arrow-simple-dims {
@@ -17,7 +17,7 @@
 }
 
 .svg-general--check {
-	background: url("sprite.svg") 100% 25% no-repeat;
+	background: url("sprite.svg") 66.66666666666667% 90% no-repeat;
 }
 
 .svg-general--check-dims {
@@ -26,7 +26,7 @@
 }
 
 .svg-general--close {
-	background: url("sprite.svg") 100% 50% no-repeat;
+	background: url("sprite.svg") 75.75757575757575% 90% no-repeat;
 }
 
 .svg-general--close-dims {
@@ -34,12 +34,66 @@
 	height: 24px;
 }
 
+.svg-social-media--facebook {
+	background: url("sprite.svg") 18.39080459770115% 90% no-repeat;
+}
+
+.svg-social-media--facebook-dims {
+	width: 27px;
+	height: 24px;
+}
+
+.svg-social-media--github {
+	background: url("sprite.svg") 28.625954198473284% 90% no-repeat;
+}
+
+.svg-social-media--github-dims {
+	width: 26px;
+	height: 24px;
+}
+
+.svg-social-media--instagram {
+	background: url("sprite.svg") 48.28897338403042% 90% no-repeat;
+}
+
+.svg-social-media--instagram-dims {
+	width: 25px;
+	height: 24px;
+}
+
+.svg-social-media--linkedin {
+	background: url("sprite.svg") 84.84848484848484% 90% no-repeat;
+}
+
+.svg-social-media--linkedin-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.svg-social-media--twitter {
+	background: url("sprite.svg") 38.54961832061068% 90% no-repeat;
+}
+
+.svg-social-media--twitter-dims {
+	width: 26px;
+	height: 24px;
+}
+
+.svg-social-media--youtube {
+	background: url("sprite.svg") 0 100% no-repeat;
+}
+
+.svg-social-media--youtube-dims {
+	width: 48px;
+	height: 48px;
+}
+
 .svg-sprite--sprite {
 	background: url("sprite.svg") 0 0 no-repeat;
 }
 
 .svg-sprite--sprite-dims {
-	width: 120px;
-	height: 120px;
+	width: 288px;
+	height: 216px;
 }
 
