@@ -1,0 +1,12 @@
+.language-switcher {
+	cursor: default;
+
+	&__button {
+		text-decoration: none;
+	}
+		
+		&__separator {
+			margin: 0 4px;
+		}
+
+}
