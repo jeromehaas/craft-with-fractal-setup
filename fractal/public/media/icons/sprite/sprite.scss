@@ -2,9 +2,19 @@
 	background: url("sprite.svg") no-repeat;
 }
 
+.svg-form-elements--checkbox-check {
+	@extend %svg-common;
+	background-position: 94.11764705882354% 42.857142857142854%;
+}
+
+.svg-form-elements--checkbox-check-dims {
+	width: 24px;
+	height: 24px;
+}
+
 .svg-form-elements--dropdown-carret {
 	@extend %svg-common;
-	background-position: 73.79679144385027% 88.13559322033899%;
+	background-position: 99.0521327014218% 20.338983050847457%;
 }
 
 .svg-form-elements--dropdown-carret-dims {
@@ -14,7 +24,7 @@
 
 .svg-form-elements--radio-bullet {
 	@extend %svg-common;
-	background-position: 68.13186813186813% 91.76470588235294%;
+	background-position: 99.75728155339806% 14.117647058823529%;
 }
 
 .svg-form-elements--radio-bullet-dims {
@@ -24,7 +34,7 @@
 
 .svg-general--arrow-link {
 	@extend %svg-common;
-	background-position: 71.27659574468085% 90.17341040462428%;
+	background-position: 96.69811320754717% 20.809248554913296%;
 }
 
 .svg-general--arrow-link-dims {
@@ -34,7 +44,7 @@
 
 .svg-general--arrow-simple {
 	@extend %svg-common;
-	background-position: 42.22222222222222% 92.85714285714286%;
+	background-position: 100% 42.857142857142854%;
 }
 
 .svg-general--arrow-simple-dims {
@@ -44,7 +54,7 @@
 
 .svg-general--check {
 	@extend %svg-common;
-	background-position: 48.888888888888886% 92.85714285714286%;
+	background-position: 94.11764705882354% 50%;
 }
 
 .svg-general--check-dims {
@@ -54,7 +64,7 @@
 
 .svg-general--close {
 	@extend %svg-common;
-	background-position: 55.55555555555556% 92.85714285714286%;
+	background-position: 100% 50%;
 }
 
 .svg-general--close-dims {
@@ -64,7 +74,7 @@
 
 .svg-social-media--facebook {
 	@extend %svg-common;
-	background-position: 13.445378151260504% 92.85714285714286%;
+	background-position: 94.81481481481481% 14.285714285714286%;
 }
 
 .svg-social-media--facebook-dims {
@@ -74,7 +84,7 @@
 
 .svg-social-media--github {
 	@extend %svg-common;
-	background-position: 20.949720670391063% 92.85714285714286%;
+	background-position: 94.58128078817734% 21.428571428571427%;
 }
 
 .svg-social-media--github-dims {
@@ -84,7 +94,7 @@
 
 .svg-social-media--instagram {
 	@extend %svg-common;
-	background-position: 35.37604456824513% 92.85714285714286%;
+	background-position: 94.34889434889435% 35.714285714285715%;
 }
 
 .svg-social-media--instagram-dims {
@@ -94,7 +104,7 @@
 
 .svg-social-media--linkedin {
 	@extend %svg-common;
-	background-position: 62.22222222222222% 92.85714285714286%;
+	background-position: 94.11764705882354% 57.142857142857146%;
 }
 
 .svg-social-media--linkedin-dims {
@@ -104,7 +114,7 @@
 
 .svg-social-media--twitter {
 	@extend %svg-common;
-	background-position: 28.212290502793294% 92.85714285714286%;
+	background-position: 94.58128078817734% 28.571428571428573%;
 }
 
 .svg-social-media--twitter-dims {
@@ -114,7 +124,7 @@
 
 .svg-social-media--youtube {
 	@extend %svg-common;
-	background-position: 0 100%;
+	background-position: 100% 0;
 }
 
 .svg-social-media--youtube-dims {
@@ -129,6 +139,6 @@
 
 .svg-sprite--sprite-dims {
 	width: 384px;
-	height: 312px;
+	height: 360px;
 }
 
