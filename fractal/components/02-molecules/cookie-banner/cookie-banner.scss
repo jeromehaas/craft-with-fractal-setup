@@ -1,0 +1,16 @@
+.cookie-banner {
+	position: fixed;
+	padding: 24px;
+	bottom: -500px;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 24px;
+	width: 100%;
+	align-items: center;
+	transition: all 3s linear;
+	
+	&--visible {
+		bottom: -0px;
+	}
+
+}

@@ -1,6 +1,6 @@
 name: Button
 context:
-  color: green
+  color: black
   text: Button
   class: ''
 variants:
