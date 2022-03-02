@@ -3,10 +3,12 @@
 
 	&__button {
 		text-decoration: none;
+		color: $white;
 	}
-		
-		&__separator {
-			margin: 0 4px;
+	
+	&__separator {
+		margin: 0 4px;
+		color: $white;
 		}
 
 }

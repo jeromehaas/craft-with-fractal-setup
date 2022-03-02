@@ -1,0 +1,33 @@
+<footer class='footer'>
+	<div class='footer__inner'>
+		<div class='footer__info-block-wrapper'>
+			
+			<div class="footer__info-block footer__info-block--block-1">
+				{{> @heading text="Kontakt" class="h3" type="h3" color="white" }}		
+				{{> @line color="white" }}
+				{{> @paragraph text="Mainstreet 11" color="white" }} 
+				{{> @paragraph text="1235 Downtown" color="white" }}
+				<a href="mailto:info@email.ch">{{> @paragraph text="info@email.ch" color="white" link="mailto:info@email.ch" }}</a>
+				<a href="tel:0411234567">{{> @paragraph text="041 123 45 67" color="white" link="tel:04112334567" }}</a>
+			</div>
+			
+			<div class="footer__info-block footer__info-block--block-2">
+				{{> @heading text="Links" class="h3" type="h3" color="white" }}		
+				{{> @line color="white" }}
+				<a href="#">{{> @paragraph text="Datenschutz" color="white" }}</a>
+				<a href="#">{{> @paragraph text="Impressum" color="white" }}</a>
+				<a href="#">{{> @paragraph text="Nutzungsbedingungen" color="white" }}</a>
+			</div>
+			
+			<div class="footer__info-block footer__info-block--block-3">
+				{{> @heading text="Newsletter abonnieren" class="h3" type="h3" color="white" }}		
+				{{> @line color="white" }}
+				{{> @social-media-icons class="footer__social-media-icons" }} 
+				{{> @language-switcher }}
+			</div>
+			
+		</div>
+		{{> @paragraph text="Copyright © 2022 COMPANY Switzerland AG" class="footer__copyright paragraph--white" }}
+
+	</div>
+</footer>
