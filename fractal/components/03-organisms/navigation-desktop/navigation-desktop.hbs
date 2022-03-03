@@ -1,0 +1,31 @@
+<nav class='navigation-desktop'>
+	<div class='navigation-desktop__inner'>
+				
+		<a href="/">
+			<img class='navigation-desktop__logo' src='/media/logos/logo-craft-with-fractal-setup.svg' alt='Decom' class='navigation-desktop__logo' />
+		</a>
+			
+			<div class='navigation-desktop__links'>
+				{{#each links}}
+						{{#if sublinks}}
+							<div class="navigation-desktop__link navigation-desktop__link--has-childs link">
+							{{> @link-navigation text=text link=link class="link__item" }}
+							<div class='navigation-desktop__dropdown dropdown'>
+								{{#each sublinks }}
+									{{> @link-navigation text=text link=link class="dropdown__item" }}
+								{{/each}}
+							</div>
+							{{else }}
+							<div class="navigation-desktop__link link">
+							{{> @link-navigation text=text link=link class="link__item" }}
+						 {{/if}}
+					</div>
+				{{/each}}
+		</div>
+
+		{{> @button text="Jetzt investieren" color="black" class="navigation-desktop__button"}}
+
+	</div>
+</nav>
+
+<div class='navigation-desktop__placeholder'></div>

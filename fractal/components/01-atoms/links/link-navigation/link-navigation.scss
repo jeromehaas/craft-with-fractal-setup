@@ -1,0 +1,10 @@
+.link-navigation {
+	
+	text-decoration:  none;
+	color: $black;
+
+	&--green { color: $green; }
+	&--white { color: $white; }
+	&--black { color: $black; }
+	
+}

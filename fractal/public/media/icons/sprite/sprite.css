@@ -1,5 +1,5 @@
 .svg-form-elements--checkbox-check {
-	background: url("sprite.svg") 95.23809523809524% 33.333333333333336% no-repeat;
+	background: url("sprite.svg") 25.333333333333332% 95.83333333333333% no-repeat;
 }
 
 .svg-form-elements--checkbox-check-dims {
@@ -8,7 +8,7 @@
 }
 
 .svg-form-elements--dropdown-carret {
-	background: url("sprite.svg") 99.22779922779922% 16% no-repeat;
+	background: url("sprite.svg") 52.76872964169381% 92.92929292929293% no-repeat;
 }
 
 .svg-form-elements--dropdown-carret-dims {
@@ -17,7 +17,7 @@
 }
 
 .svg-form-elements--radio-bullet {
-	background: url("sprite.svg") 99.80314960629921% 11.009174311926605% no-repeat;
+	background: url("sprite.svg") 49.00662251655629% 95.17241379310344% no-repeat;
 }
 
 .svg-form-elements--radio-bullet-dims {
@@ -26,7 +26,7 @@
 }
 
 .svg-general--arrow-link {
-	background: url("sprite.svg") 97.3076923076923% 16.289592760180994% no-repeat;
+	background: url("sprite.svg") 51.298701298701296% 94.19795221843003% no-repeat;
 }
 
 .svg-general--arrow-link-dims {
@@ -35,7 +35,7 @@
 }
 
 .svg-general--arrow-simple {
-	background: url("sprite.svg") 100% 33.333333333333336% no-repeat;
+	background: url("sprite.svg") 29.333333333333332% 95.83333333333333% no-repeat;
 }
 
 .svg-general--arrow-simple-dims {
@@ -43,8 +43,17 @@
 	height: 24px;
 }
 
+.svg-general--carret {
+	background: url("sprite.svg") 33.333333333333336% 95.83333333333333% no-repeat;
+}
+
+.svg-general--carret-dims {
+	width: 24px;
+	height: 24px;
+}
+
 .svg-general--check {
-	background: url("sprite.svg") 95.23809523809524% 38.888888888888886% no-repeat;
+	background: url("sprite.svg") 37.333333333333336% 95.83333333333333% no-repeat;
 }
 
 .svg-general--check-dims {
@@ -53,7 +62,7 @@
 }
 
 .svg-general--close {
-	background: url("sprite.svg") 100% 38.888888888888886% no-repeat;
+	background: url("sprite.svg") 41.333333333333336% 95.83333333333333% no-repeat;
 }
 
 .svg-general--close-dims {
@@ -62,7 +71,7 @@
 }
 
 .svg-social-media--facebook {
-	background: url("sprite.svg") 95.80838323353294% 11.11111111111111% no-repeat;
+	background: url("sprite.svg") 8.040201005025125% 95.83333333333333% no-repeat;
 }
 
 .svg-social-media--facebook-dims {
@@ -71,7 +80,7 @@
 }
 
 .svg-social-media--github {
-	background: url("sprite.svg") 95.61752988047809% 16.666666666666668% no-repeat;
+	background: url("sprite.svg") 12.54180602006689% 95.83333333333333% no-repeat;
 }
 
 .svg-social-media--github-dims {
@@ -80,7 +89,7 @@
 }
 
 .svg-social-media--instagram {
-	background: url("sprite.svg") 95.42743538767395% 27.77777777777778% no-repeat;
+	background: url("sprite.svg") 21.202003338898162% 95.83333333333333% no-repeat;
 }
 
 .svg-social-media--instagram-dims {
@@ -89,7 +98,7 @@
 }
 
 .svg-social-media--linkedin {
-	background: url("sprite.svg") 95.23809523809524% 44.44444444444444% no-repeat;
+	background: url("sprite.svg") 45.333333333333336% 95.83333333333333% no-repeat;
 }
 
 .svg-social-media--linkedin-dims {
@@ -98,7 +107,7 @@
 }
 
 .svg-social-media--twitter {
-	background: url("sprite.svg") 95.61752988047809% 22.22222222222222% no-repeat;
+	background: url("sprite.svg") 16.889632107023413% 95.83333333333333% no-repeat;
 }
 
 .svg-social-media--twitter-dims {
@@ -107,7 +116,7 @@
 }
 
 .svg-social-media--youtube {
-	background: url("sprite.svg") 100% 0 no-repeat;
+	background: url("sprite.svg") 0 100% no-repeat;
 }
 
 .svg-social-media--youtube-dims {
@@ -120,7 +129,7 @@
 }
 
 .svg-sprite--sprite-dims {
-	width: 480px;
-	height: 456px;
+	width: 624px;
+	height: 552px;
 }
 

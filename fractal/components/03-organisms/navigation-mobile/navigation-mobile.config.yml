@@ -1,0 +1,25 @@
+name: Navigation Mobile
+context:
+  links:
+  - text: Home
+    link: "/"
+    sublinks: []
+  - text: Über uns
+    sublinks:
+    - text: Unternehmen
+      link: "/company"
+    - text: Team
+      link: "/team"
+    - text: FAQ
+      link: "/faq"
+    - text: Roadmap
+      link: "/roadmap"
+  - text: Insights & Blog
+    link: "/blog-overview"
+    sublinks: []
+  - text: Login
+    sublinks:
+    - text: Login
+      link: "/register"
+    - text: Registrieren
+      link: "/register"

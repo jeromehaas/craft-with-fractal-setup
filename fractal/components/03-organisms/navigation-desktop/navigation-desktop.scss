@@ -1,0 +1,117 @@
+.navigation-desktop {
+
+		z-index: 10;
+		border-bottom: 1px solid $black;
+		z-index: 10;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		height: 100px;
+		background-color: white;
+		
+		&__inner {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 30px;
+			max-width: 1500px;
+			margin: 0 auto;
+			height: 100px;
+		}
+
+		&__logo-link {
+			line-height: 1;
+		}
+		
+		&__logo {
+			height: 50px;
+		}
+
+		&__link {
+			position: relative;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-right: 40px;
+			
+			&--has-childs {
+
+				&:hover .navigation-desktop__dropdown, 
+				+ .navigation-desktop__dropdown:hover {
+					display: flex;
+				}
+
+				.link__item {
+		
+						&:after {
+							content: url('/media/icons/general/carret.svg');
+							width: 8px;
+							position: absolute;
+							height: 8px;
+							display: inline-block;
+							margin-left: 8px;
+							transform: translateY(-25%);
+						}
+					
+					}
+
+
+			}
+
+		}
+
+		&__links {
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		&__item {
+			padding: 8px;
+			display: inline-block;
+			line-height: 1;
+		
+		}
+
+		&__dropdown, .dropdown {
+			display: none;
+			position: absolute;
+			top: 100px;
+			left: 0;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			background-color: $white;
+			border: 1px solid $black;
+			border-top: 0;
+			transition-delay: 3s;
+			
+			&__item {
+				padding: 8px 16px;
+				width: 100%;
+				
+				&:hover {
+					background-color: $grey;
+				}
+				
+			}
+		
+		}
+		
+	}
+	
+	.navigation-placeholder {
+		margin-bottom: 100px;
+	}
+	
+	@media (max-width: 1040px) {
+		
+		.navigation-desktop {
+			display: none;
+		}
+
+}
