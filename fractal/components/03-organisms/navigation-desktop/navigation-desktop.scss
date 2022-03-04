@@ -104,13 +104,14 @@
 		
 	}
 	
-	.navigation-placeholder {
+	.navigation-desktop__placeholder {
 		margin-bottom: 100px;
 	}
 	
 	@media (max-width: 1040px) {
 		
-		.navigation-desktop {
+		.navigation-desktop, 
+		.navigation-desktop__placeholder {
 			display: none;
 		}
 

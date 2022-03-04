@@ -50,7 +50,7 @@ const filePaths = {
 	},
 	favicon: {
 		src: ['./public/media/favicons/**/*.+(png|ico)'],
-		dist: ['../craft/web/public/media/favicons']
+		dist: ['./public/media/favicons', '../craft/web/public/media/favicons']
 	}
 }
 

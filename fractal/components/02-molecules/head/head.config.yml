@@ -1,0 +1,6 @@
+name: Head
+context: 
+  title: Craft with Fractal Setup
+  description: This boilerplate setup can be used to create customized websites that requires a component libary and a CMS backend from Craft
+  author: Jérôme Haas
+  url: https://craft-with-fractal-setup.com

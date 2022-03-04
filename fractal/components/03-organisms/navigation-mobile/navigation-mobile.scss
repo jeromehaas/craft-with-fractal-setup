@@ -23,6 +23,8 @@
 			left: 0;
 			z-index: -1;
 			transition: all 0.3s ease;
+			touch-action: none;
+			pointer-events: none;
 			
 			&--active {
 				opacity: 0.75;
@@ -137,13 +139,14 @@
 	
 }
 	
-	.navigation-placeholder {
+	.navigation-mobile__placeholder {
 		margin-bottom: 75px;
 	}
 	
 	@media (max-width: 1040px) {
 		
-		.navigation-mobile {
+		.navigation-mobile, 
+		.navigation-mobile__placeholder {
 			display: block
 		}
 		

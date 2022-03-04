@@ -2,3 +2,4 @@ name: Image
 context: 
   src: /media/images/clean-code.jpg
   alt: clean code
+  caption: Programmers love when they face clean code.
