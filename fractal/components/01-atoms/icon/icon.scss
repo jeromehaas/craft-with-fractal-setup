@@ -1,7 +1,15 @@
-%svg-common {
-	background-image: url("/media/icons/sprite/sprite.svg");
-}
+// %svg-common {
+// 	background-image: url("/media/icons/sprite/sprite.svg");
+// }
 
-svg {
-	fill: red;
+.icon {
+	
+	&--white {
+		color: $white;
+	}
+
+	&--lg {
+		font-size: 32px;
+	}
+
 }
