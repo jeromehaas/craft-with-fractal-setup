@@ -1,0 +1,6 @@
+name: Range
+context: 
+  label: Label
+  min: 0
+  max: 1000
+  steps: 1

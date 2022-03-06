@@ -1,0 +1,53 @@
+.range {
+
+	&__label {
+		margin-bottom: 12px;
+	}
+
+	&__input[type="range"] {
+		margin: auto;
+		-webkit-appearance: none;
+		position: relative;
+		height: 4px;
+		width: 100%;
+		cursor: pointer;
+		border-radius: 5px;
+		margin-bottom: 32px;
+	}
+
+	::-webkit-slider-runnable-track {
+		height: 8px;
+		border-radius: 0;
+	}
+
+	::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background: $black;
+		position: relative;
+		top: -4px;
+
+		&:active {
+			cursor: grabbing;
+		}
+
+	}
+
+	::-moz-range-track {
+		height: 8px;
+		border-radius: 0;
+	}
+	
+	::-moz-range-thumb {
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background: $black;
+		position: relative;
+		top: -4px;
+	}
+
+
+}
