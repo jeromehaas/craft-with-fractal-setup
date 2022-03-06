@@ -8,12 +8,14 @@
 		"@frctl/twig": "^1.2.12",
 		"autoprefixer": "^10.4.2",
 		"browser-sync": "^2.27.7",
+		"concurrently": "^6.5.1",
 		"del": "^6.0.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",
 		"gulp-babel": "^8.0.0",
 		"gulp-cache": "^1.1.3",
 		"gulp-concat": "^2.6.1",
+		"gulp-copy": "^4.0.1",
 		"gulp-cssnano": "^2.1.3",
 		"gulp-favicons": "^3.0.0",
 		"gulp-imagemin": "^7.1.0",
@@ -26,11 +28,10 @@
 		"gulp-svgmin": "^4.1.0",
 		"gulp-uglify": "^3.0.2",
 		"node-sass": "^7.0.0",
-		"sass": "^1.49.9",
-		"concurrently": "^6.5.1"
+		"sass": "^1.49.9"
 	},
 	"scripts": {
-    "start": "concurrently --kill-others \"npm run gulp\" \"npm run fractal:start\"",
+		"start": "concurrently --kill-others \"npm run gulp\" \"npm run fractal:start\"",
 		"fractal:start": "fractal start --sync --port 3005",
 		"fractal:build": "fractal build",
 		"gulp": "gulp"

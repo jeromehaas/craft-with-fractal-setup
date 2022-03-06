@@ -1,8 +1,8 @@
 <div class="radio {{ class }}">
   {{#each options}}
 		<span class='radio__option'>	
-			<input class='radio__input' name="{{ name }}" type='radio' value="{{ value }}" />
-			{{> @label name="{{ name }}" class="radio__label"}}
+			<input class='radio__input' name="{{ name }}" type='radio' value="{{ value }}" id="{{ name }}" />
+			{{> @label name="{{ name }}" class="radio__label" for="{{ name }}"}}
 		</span>
   {{/each}}
 </div>

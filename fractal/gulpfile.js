@@ -17,6 +17,7 @@ const svgmin = require('gulp-svgmin');
 const sass = require('gulp-sass')(require('sass'));
 const favicons = require('gulp-favicons');
 const svgSprite = require('gulp-svg-sprite');
+const gulpCopy = require('gulp-copy');
 
 // SOURCE PATHS
 const filePaths = {
@@ -51,6 +52,10 @@ const filePaths = {
 	favicon: {
 		src: ['./public/media/favicons/**/*.+(png|ico)'],
 		dist: ['./public/media/favicons', '../craft/web/public/media/favicons']
+	},
+	lottie: {
+		src: ['./public/media/lotties/**/*.json'],
+		dist: ['../craft/web/public/media/lotties']
 	}
 }
 
@@ -65,7 +70,8 @@ notifier.defaults({
 		graphic: "Graphics optimized!",
 		fonts: "Fonts optimized!",
 		favicon: "Favicon optimized!",
-		readme: "Readme optimized!"
+		readme: "Readme optimized!",
+		lottie: "Lotties transported"
 	},
 	prefix: '===>',
 	suffix: '<===',
@@ -181,8 +187,16 @@ const faviconTask = (done) => {
 		}))
 		.pipe(gulp.dest(filePaths.favicon.dist[0]))
 		.pipe(notifier.success('favicon'))
-	done();
+		done();
 };
+
+// LOTTIE TASK
+const lottieTask = (done) => {
+	gulp.src(filePaths.lottie.src)
+		.pipe(gulpCopy(filePaths.lottie.dist[0], { prefix: 3 }))
+		.pipe(notifier.success('lottie'))
+		done();
+}
 
 
 // WATCH TASK
@@ -197,5 +211,5 @@ const watchTask = () => {
 	gulp.watch(filePaths.js.src, jsTask).on("change", browserSync.reload);
 }
 
-exports.build = parallel(iconSpriteTask, scssTask, fontTask, jsTask, imageTask, iconTask, graphicTask, faviconTask);
+exports.build = parallel(iconSpriteTask, scssTask, fontTask, jsTask, imageTask, iconTask, graphicTask, faviconTask, lottieTask);
 exports.default = series(exports.build, watchTask);

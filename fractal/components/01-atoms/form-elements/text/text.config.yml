@@ -1,4 +1,4 @@
-name: Input
+name: Text
 context: 
   placeholder: Placeholder
   name: Input
