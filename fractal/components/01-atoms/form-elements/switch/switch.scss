@@ -1,0 +1,57 @@
+.switch {
+	width: 48px;
+	height: 24px;
+	position: relative;
+	margin: auto 16px;
+
+	&__input {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		-moz-opacity: 0;
+		opacity: 0;
+		z-index: 100;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+	}
+
+	&__background {
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		background: #cfd8ef;
+		border-radius: 15px;
+		-webkit-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+	}
+
+	&__input ~ .switch__background i {
+		display: block;
+		height: 16px;
+		width: 16px;
+		position: absolute;
+		left: 4px;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+		border-radius: inherit;
+		background: $white;
+		-webkit-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+	}
+
+	&__input:checked + .switch__background {
+		background: $black;
+	}
+	
+	&__input:checked + .switch__background i {
+		left: auto;
+		left: calc(100% - (14px + 4px));
+		-webkit-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+	}
+}
