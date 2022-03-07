@@ -25,3 +25,8 @@ variants:
     text: This is a H4
     type: h4
     lookLike: h4
+- name: h5
+  context:
+    text: This is a H5
+    type: h5
+    lookLike: h5

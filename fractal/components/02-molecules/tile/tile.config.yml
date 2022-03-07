@@ -2,10 +2,8 @@ name: Tile
 context: 
   title: Title
   subtitle: Subtitle
-  link: 
-    text: Mehr erfahren
-    href: '#'
+  linkText: Mehr erfahren
+  linkHref: '#'
   background-color: 'green'
-  image: 
-    alt: Image Alt Tag
-    src: /media/images/clean-code.jpg
+  imageAlt: Image Alt Tag
+  imageSrc: /media/images/clean-code.jpg
