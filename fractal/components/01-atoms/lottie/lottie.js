@@ -2,11 +2,11 @@ class Lottie {
 
 	constructor() {
 		this.name = 'lottie';
-		this.container = document.getElementById('lottie')
 		this.options = {
 			loop: true,
 			autoplay: true,
 			path: '/media/lotties/lottie-checkmark.json',
+			container: document.getElementById('lottie'),
 			renderer: 'svg'
 		}
 		this.status = 'playing';
@@ -20,12 +20,12 @@ class Lottie {
 	};
 
 	addEventListener() {
-		this.container.addEventListener('click', this.toggle);
+		this.options.container.addEventListener('click', this.toggle);
 	};
 
 	load() {
-		const myLottie = lottie.loadAnimation({
-			container: this.container, 
+		lottie.loadAnimation({
+			container: this.options.container, 
 			renderer: this.options.renderer,
 			loop: this.options.loop,
 			autoplay: this.options.autoplay,
