@@ -26,4 +26,14 @@
 		transition: all 0.1s ease;
 	}
 
+	&--black {
+		.link__text { color: $black; }
+		.link__arrow { color: $black; }
+	}
+
+	&--white { 
+		.link__text { color: $white }
+		.link__arrow { color: $black }
+	}
+
 }

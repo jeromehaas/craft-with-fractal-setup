@@ -22,7 +22,7 @@ const gulpCopy = require('gulp-copy');
 // SOURCE PATHS
 const filePaths = {
 	scss: {
-		src: ['./public/scss/configs/reset.scss', './public/scss/configs/fonts.scss', './public/fonts/nucleo/nucleo.scss', './public/scss/configs/variables.scss', './public/scss/configs/typography.scss', './public/scss/configs/mixins.scss', './public/scss/configs/global.scss', './public/media/icons/sprite/sprite.scss', './components/**/*.scss'],
+		src: ['./public/scss/configs/reset.scss', './public/scss/configs/fonts.scss', './public/fonts/nucleo/nucleo.scss', './public/scss/configs/variables.scss', './public/scss/configs/keyframes.scss', './public/scss/configs/typography.scss', './public/scss/configs/mixins.scss', './public/scss/configs/global.scss', './public/media/icons/sprite/sprite.scss', './components/**/*.scss'],
 		dist: ['./public/css', '../craft/web/public/css']
 	},
 	fonts: {

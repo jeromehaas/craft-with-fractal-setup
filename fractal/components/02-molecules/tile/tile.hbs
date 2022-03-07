@@ -1,0 +1,17 @@
+<div class="tile {{ class }}">
+
+	<div class="tile__back back">
+		<div class="back__inner">
+			<img class="back__image" src="/media/images/clean-code.jpg" alt="Image">
+		</div>
+	</div>
+
+	<div class="tile__front front front--{{ background-color }}">
+		<div class="front__inner">
+			{{> @heading type="h2" text="Title" class="front__title" color="white" }}
+			{{> @heading type="h5" text="This is the subtitle" class="front__subtitle" color="white" }}
+			{{> @link-with-arrow text="Link" class="front__link" color="white"  }}
+		</div>
+	</div>
+
+</div>

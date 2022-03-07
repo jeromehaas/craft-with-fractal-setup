@@ -1,0 +1,11 @@
+name: Tile
+context: 
+  title: Title
+  subtitle: Subtitle
+  link: 
+    text: Mehr erfahren
+    href: '#'
+  background-color: 'green'
+  image: 
+    alt: Image Alt Tag
+    src: /media/images/clean-code.jpg

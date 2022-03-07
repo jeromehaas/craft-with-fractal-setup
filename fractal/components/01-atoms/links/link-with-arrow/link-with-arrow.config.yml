@@ -1,3 +1,4 @@
 name: Link with Arrow
 context: 
   href: '#'
+  color: black
