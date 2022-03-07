@@ -204,7 +204,10 @@ const watchTask = () => {
 	browserSync.init({
 		server: { baseDir: './' },
 		open: false,
-		port: 3007
+		port: 3007,
+		ui: {
+			port: 3008
+		},
 	});
 	gulp.watch('./index.html').on('change', browserSync.reload);
 	gulp.watch(filePaths.scss.src, scssTask).on("change", browserSync.reload);
