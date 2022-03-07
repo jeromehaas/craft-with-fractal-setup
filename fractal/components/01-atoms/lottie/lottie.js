@@ -1,6 +1,7 @@
 class Lottie {
 
 	constructor() {
+		this.name = 'lottie';
 		this.container = document.getElementById('lottie')
 		this.options = {
 			loop: true,
@@ -13,6 +14,7 @@ class Lottie {
 	};
 	
 	init() {
+		if (!document.querySelector(`.js-${this.name}`)) return;
 		this.load();
 		this.addEventListener();
 	};
@@ -29,7 +31,6 @@ class Lottie {
 			autoplay: this.options.autoplay,
 			path:  this.options.path
 		});
-		console.log(myLottie);
 	};
 
 	toggle() {
