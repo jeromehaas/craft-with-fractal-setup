@@ -4,9 +4,8 @@
 
 .icon {
 	
-	&--white {
-		color: $white;
-	}
+	&--white { color: $white; }
+	&--black { color: $black; }
 
 	&--lg {
 		font-size: 32px;

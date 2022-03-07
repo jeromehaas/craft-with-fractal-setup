@@ -1,4 +1,6 @@
-<a class="link link--{{ color }} {{ class }}" href="#" tabindex="2">
-	<span class="link__text">{{ text }}</span>
-	{{> @icon icon="arrow-link" folder="general" class="link__arrow"}}
+<a class="link link-with-arrow link-with-arrow--{{ color }} {{ class }}" href="#" tabindex="1">
+	<span class="link-with-arrow__text">{{ text }}</span>
+	{{#if hasArrow}}
+	{{> @icon icon="right-arrow" folder="social-media" class="link-with-arrow__icon" color=color}}
+	{{/if}}
 </a>

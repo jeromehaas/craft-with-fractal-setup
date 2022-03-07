@@ -1,9 +1,9 @@
 .tile {
 	height : 100%;
 	min-height: 60px;
-	// width: calc(100% / 3);
 	position: relative;
 	overflow: hidden;
+	aspect-ratio: 1;
 	
 	&__back, .back {
 		width: 100%;

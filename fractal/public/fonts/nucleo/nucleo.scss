@@ -112,6 +112,7 @@ $icon-logo-github: unicode(ea02);
 $icon-logo-linkedin: unicode(ea03);
 $icon-logo-youtube: unicode(ea04);
 $icon-logo-instagram: unicode(ea05);
+$icon-right-arrow: unicode(ea06);
 
 .icon-logo-github::before {
   content: $icon-logo-github;
@@ -127,4 +128,8 @@ $icon-logo-instagram: unicode(ea05);
 
 .icon-logo-instagram::before {
   content: $icon-logo-instagram;
+}
+
+.icon-right-arrow::before {
+  content: $icon-right-arrow;
 }

@@ -1,39 +1,50 @@
-.link {
-	
+.link-with-arrow {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
 	text-decoration:  none;
 	
-	&:hover {
-		.link__arrow {
-			margin-left: 6px;
-			display: block;
-		}
-	
-	}
-	
 	&__text {
 		margin-right: 8px;
+		color: $black;
 		font-family: 'Roboto-Regular';
 	}
 
-	&__arrow  {
-		width: 16px;
-		height: 16px;
-		object-fit: contain;
+	&__icon  {
+		font-size: 10px;
+		vertical-align: middle;
+		color: $black;
+		font-weight: 100;
 		transition: all 0.1s ease;
+		margin-left: 4px;
+
+		&::before {
+			vertical-align: baseline;
+		}
+
 	}
 
 	&--black {
-		.link__text { color: $black; }
-		.link__arrow { color: $black; }
+		.link-with-arrow__text { color: $black; }
+		.link-with-arrow__icon { color: $black; }
 	}
 
 	&--white { 
-		.link__text { color: $white }
-		.link__arrow { color: $black }
+		.link-with-arrow__text { color: $white }
+		.link-with-arrow__icon { color: $black }
+	}
+
+	&:hover {
+		
+		.link-with-arrow__text {
+			color: red;
+		}
+		
+		.link-with-arrow__icon {
+			margin-left: 8px;
+		}
+	
 	}
 
 }
