@@ -1,0 +1,25 @@
+.carousel {
+	width: calc(100% - (2 * 80px));
+	margin: 0 auto;
+	
+	&__item, .item {
+		width: 100%;
+		margin-right: 10px;
+		background: $grey;
+		padding: 32px;
+		border-radius: 5px;
+
+		&__quote {
+			text-align: left;
+			margin-bottom: 32px;
+		}
+
+		&__meta, .meta {
+
+		}
+
+	}
+
+
+	
+}

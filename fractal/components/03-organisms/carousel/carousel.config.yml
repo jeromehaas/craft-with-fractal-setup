@@ -1,0 +1,30 @@
+name: Slider
+context: 
+  items: 
+    - one:
+      quote: Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident alias, voluptatibus quos tenetur harum delectus, cupiditate nesciunt consequatur dicta amet saepe, magni nisi praesentium labore consectetur sunt aspernatur accusamus. Doloribus?
+      author: Firstname Lastname
+      role: Role 
+      company: Company Name
+      icon: /media/icon.svg
+    - one:
+      quote: Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident alias, voluptatibus quos tenetur harum delectus, cupiditate nesciunt consequatur dicta amet saepe, magni nisi praesentium labore consectetur sunt aspernatur accusamus. Doloribus? Provident alias, voluptatibus quos tenetur harum delectus, cupiditate nesciunt consequatur dicta amet saepe, magni nisi praesentium labore consectetur sunt aspernatur accusamus. Doloribus?
+      author: Firstname Lastname
+      role: Role 
+      company: Company Name
+      icon: /media/icon.svg
+    - one:
+      quote: Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident alias, voluptatibus quos tenetur harum delectus, cupiditate nesciunt consequatur dicta amet saepe, magni nisi praesentium labore consectetur sunt aspernatur accusamus. Doloribus?
+      author: Firstname Lastname
+      role: Role 
+      company: Company Name
+      icon: /media/icon.svg
+    - one:
+      quote: Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident alias, voluptatibus quos tenetur harum delectus, cupiditate nesciunt consequatur dicta amet saepe, magni nisi praesentium labore consectetur sunt aspernatur accusamus. Doloribus?
+      author: Firstname Lastname
+      role: Role 
+      company: Company Name
+      icon: /media/icon.svg
+
+
+      
