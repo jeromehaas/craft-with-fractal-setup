@@ -1,0 +1,90 @@
+.file {
+
+		
+	&__wrapper {
+		display: grid;
+		grid-template: auto / 200px auto;
+		grid-template-areas: 
+			"button input";
+	}
+
+	&__button {
+		grid-area: button;
+		color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	 	cursor: pointer;
+		padding: $input-padding;
+		border-radius: $input-border-radius 0 0 $input-border-radius;
+	 	outline: none;
+		border: 1px solid $black;
+		background-color: $black;
+	 	text-align: center;
+ 	}
+
+	
+  &__input {
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+	}
+
+	&__fake-input {
+		grid-area: input;
+		width: 100%;
+		padding: $input-padding;
+		border-radius: 0 4px 4px 0 ;
+		outline: none;
+		border: 1px solid $black;
+		border-left: 0;
+		color: $black;
+		caret-color: $white;
+		pointer-events: none;
+		background-color: transparent;
+
+		&::placeholder{
+			color: $black;
+		}
+		
+		::-ms-input-placeholder {
+			color: $green;
+		}
+
+	}
+
+
+
+	&__input + &__label * {
+		pointer-events: none;
+	}
+
+	&__error-text {
+		grid-area: error;
+		color: $red;
+		display: none;
+	}
+
+	@media (max-width: 600px) {
+
+		&__wrapper {
+			display: grid;
+			grid-template: auto / 60px auto;
+			grid-template-areas: 
+				"button input";
+		}
+
+		&__button {
+			background: url('/media/icons/form-elements/upload-arrow.svg'), $black;
+			background-position: center, center;
+			background-repeat: no-repeat, repeat;
+			background-size: 12px;
+			font-size: 0px;
+		}
+
+	}
+
+}

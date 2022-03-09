@@ -1,0 +1,4 @@
+name: File
+context: 
+  placeholder: Placeholder
+  buttonText: Upload
