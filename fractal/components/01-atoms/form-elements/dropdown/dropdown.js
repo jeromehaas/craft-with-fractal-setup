@@ -15,15 +15,19 @@ class Droppdown {
 
 	addEventListeners() {
 		[...this.elements.dropdowns].forEach((dropdown) => {
-			dropdown.querySelector('.dropdown__options').addEventListener('click', (event) => this.updatePlaceholderText(event));
+			const labels = dropdown.querySelectorAll('.option__label');
+			[...labels].forEach((label) => {
+				label.addEventListener('click', (event) => this.updatePlaceholderText(event));
+			})
 		});
 	}
 
 	updatePlaceholderText(event) {
 		const text = event.target.innerText;
 		const dropdown = event.target.closest('.dropdown');
-		const input  = dropdown.querySelector('.dropdown__input');
+		const input = dropdown.querySelector('.dropdown__input');
 		input.innerText = text;
+		input.click();
 	};
 
 };

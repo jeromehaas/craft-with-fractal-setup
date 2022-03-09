@@ -1,12 +1,13 @@
 .text {
 
-	background-color: $input-background-color;
-	border-radius: $input-border-radius;
-	padding: $input-padding;
-	outline: $input-outline;
-	margin-bottom: $input-margin;
-	width: $input-width;
-	border: $input-border;
+	&__input {		
+		background-color: $input-background-color;
+		border-radius: $input-border-radius;
+		padding: $input-padding;
+		outline: $input-outline;
+		margin-bottom: $input-margin;
+		width: $input-width;
+		border: $input-border;
 		
 		&--error {
 			border-color: $red !important;
@@ -15,5 +16,7 @@
 		&--hidden {
 			@include hidden;
 		}
+		
+	}
 
 }

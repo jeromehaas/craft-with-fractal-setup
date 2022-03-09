@@ -1,0 +1,16 @@
+<form class="form" >
+	<span class="form__gender">
+		{{> @radio name="gender" value="m" text="Male" }}
+		{{> @radio name="gender" value="f" text="Female" }}
+	</span>
+	{{> @text  class="form__firstname" label="Firstname" }}
+	{{> @text  class="form__lastname" label="Lastname" }}
+	{{> @text  class="form__address" label="Adress" }}
+	{{> @text  class="form__zip" label="ZIP" }}
+	{{> @text  class="form__city" label="City" }}
+	{{> @text  class="form__city" label="City" }}
+	{{> @text  class="form__email" label="Email-Address" }}
+	{{> @dropdown class="form__country" placeholder="Country" name="country"}}
+	{{> @checkbox class="form__agb" text="I have read and understood the ABG's and hereby accept them." }}
+	{{> @submit-button class="form__submit" text="submit"}}
+</form>

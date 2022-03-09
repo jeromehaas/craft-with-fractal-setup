@@ -1,8 +1,6 @@
 <div class="checkbox {{ class }}">
-  {{#each options}}
 		<span class='checkbox__option'>	
 			<input class='checkbox__input' name="{{ name }}" type='checkbox' value="{{ value }}" />
-			{{> @label name="{{ name }}" class="checkbox__label"}}
+			{{> @label text=text name="{{ name }}" class="checkbox__label"}}
 		</span>
-  {{/each}}
 </div>

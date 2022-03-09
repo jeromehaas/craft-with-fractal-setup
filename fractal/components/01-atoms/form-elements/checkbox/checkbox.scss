@@ -4,22 +4,21 @@
 		display: inline-flex;
 		flex-direction: row;
 		justify-content: flex-start;
-		align-items: center;
+		align-items: flex-start;
 		margin-right: 30px;
 		margin-bottom: 15px;
-	}
-
-	&__option-wrapper:last-child {
-		margin-right: 0px;
 	}
 
 	&__input {
 		width: 24px;
     height: 24px;
+		min-width: 24px;
+		min-height: 24px;
 		background-color: $input-background-color;
     appearance: none;
     vertical-align: bottom;
     margin-right: 16px;
+		margin-top: 4px;
     background-image: url('/media/icons/form-elements/checkbox-check.svg');
     background-size: 0px;
     background-position: center;
@@ -35,7 +34,7 @@
 	}
 
 	&__label {
-		margin-top: 5px;
+		margin-top: 4px;
 	}
 
 }

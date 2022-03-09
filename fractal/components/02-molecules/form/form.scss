@@ -1,0 +1,93 @@
+.form	{
+	padding: 32px;
+	display: grid;
+	grid-gap: 32px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+		"gender gender gender gender"
+		"firstname firstname lastname lastname"
+		"address address address address"
+		"zip city city city"
+		"country country country country"
+		"email email email email"
+		"upload upload upload upload"
+		"agb agb agb agb"
+		"submit submit submit submit";
+
+		&__gender {
+			grid-area: gender;
+			display: flex;
+			flex-direction: row;
+		}
+
+		&__firstname {
+			grid-area: firstname;
+		}
+
+		&__lastname {
+			grid-area: lastname;
+		}
+
+		&__address {
+			grid-area: address;
+		}
+
+		&__zip {
+			grid-area: zip;
+		}
+
+		&__city {
+			grid-area: city;
+		}
+
+		&__country {
+			grid-area: country;
+		}
+
+		&__email {
+			grid-area: email;
+		}
+
+		&__upload {
+			grid-area: upload;
+		}
+
+		&__agb {
+			grid-area: agb
+		}
+
+		&__submit {
+			grid-area: submit;
+			align-self: end;
+			justify-self: end;
+		}
+
+		@media (max-width: 500px) {
+			padding: 32px;
+			display: grid;
+			grid-gap: 32px;
+			grid-template-columns: 2fr;
+			grid-template-areas: 
+				"gender"
+				"firstname"
+				"lastname"
+				"address"
+				"zip"
+				"city"
+				"country"
+				"email"
+				"upload"
+				"agb"
+				"submit";
+		}
+		
+		@media (max-width: 400px) {
+			
+			&__submit, 
+			&__submit .button {
+				width: 100%;
+			}
+
+		}
+
+}

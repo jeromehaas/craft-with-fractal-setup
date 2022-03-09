@@ -1,15 +1,21 @@
 <div class="dropdown js-dropdown {{ class }}">
-		{{> @label name="option" class="dropdown__label"}}
+		{{> @label name="option" class="dropdown__label" }}
 		<label class="dropdown__input" for="{{ name }}">
 			{{ placeholder }}
 		</label>
 		<input class="dropdown__checkbox" type="checkbox" name="{{ name }}" id="{{ name }}" >
 		<div class="dropdown__options">
-  		{{#each options}}
 				<span class="dropdown__option option">	
-					<input class="option__input" name="{{ name }}" type='radio' value="{{ value }}" id="{{ name }}" />
-					<label class="option__label"for="{{ name }}">{{ text }}</label>
+					<input class="option__input" name="ch" type='radio' value="ch" id="ch" />
+					<label class="option__label"for="ch">Switzerland</label>
 				</span>
-  		{{/each}}
+				<span class="dropdown__option option">	
+					<input class="option__input" name="it" type='radio' value="it" id="it" />
+					<label class="option__label"for="it">Italy</label>
+				</span>
+				<span class="dropdown__option option">	
+					<input class="option__input" name="de" type='radio' value="de" id="de" />
+					<label class="option__label"for="de">Germany</label>
+				</span>
 		</div>
 </div>

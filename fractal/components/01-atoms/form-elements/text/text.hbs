@@ -1,2 +1,4 @@
-{{> @label text="Label" }}
-<input class='text' type='text' name="{{ name }}" placeholder="{{ placeholder }}" type="{{ type }}" />
+<div class="text {{ class }}">
+	{{> @label text=label }}
+	<input class='text__input' type='text' name="{{ name }}" placeholder="{{ placeholder }}" type="{{ type }}" />
+</div>

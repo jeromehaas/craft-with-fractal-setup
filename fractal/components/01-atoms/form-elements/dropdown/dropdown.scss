@@ -1,11 +1,12 @@
 .dropdown {
+	position: relative;
 
 	&__input {
 		background-color: $input-background-color;
 		border-radius: $input-border-radius;
 		padding: $input-padding;
 		outline: $input-outline;
-		margin: $input-margin;
+		line-height: 1.5;
 		width: $input-width;
 		border: $input-border;
 		display: block;
@@ -16,8 +17,8 @@
 			width: 12px;
 			height: 6px;
 			position: absolute;
-			right: 12px;
-			top: 18px;
+			right: 16px;
+			top: 50%;
 			background: url('/media/icons/form-elements/dropdown-carret.svg') no-repeat;
 		}
 	}
@@ -34,9 +35,12 @@
 	&__options {
 		display: none;
 		border: $input-border;
+		border-top: none;
 		border-radius: $input-border-radius;
 		flex-direction: column;
 		overflow: hidden;
+		position: absolute;
+		width: 100%;
 	}
 
 	&__option, .option {
@@ -45,11 +49,13 @@
 			border: $input-border;
 			display: none;
 		}
-
+		
 		&__label {
+
 			display: block;
 			padding: $input-padding;
 			background-color: $white;
+			line-height: 1.5;
 
 			&:hover {
 				background-color: $grey;
