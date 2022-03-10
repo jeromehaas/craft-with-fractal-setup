@@ -9,7 +9,7 @@
 				{{#each links}}
 						{{#if sublinks}}
 							<div class="navigation-desktop__link navigation-desktop__link--has-childs link">
-							{{> @link-navigation text=text link=link class="link__item" }}
+							{{> @paragraph text=text link=link class="link__item" }}
 							<div class='navigation-desktop__dropdown dropdown'>
 								{{#each sublinks }}
 									{{> @link-navigation text=text link=link class="dropdown__item" }}

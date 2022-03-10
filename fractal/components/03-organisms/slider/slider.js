@@ -1,6 +1,7 @@
 class Slider {
 
 	constructor() {
+		this.name = 'slider';
 		this.elements = {
 			arrows: {
 				right: document.querySelector('.slider__arrow--right'),
@@ -20,6 +21,7 @@ class Slider {
 	}
 
 	init() {
+		if (!document.querySelector(`.js-${this.name}`)) return false;
 		this.addEventListener()
 	}
 
