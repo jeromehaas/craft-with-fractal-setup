@@ -73,5 +73,41 @@
 		
 	}
 	
+	@media (max-width: 500px) {
+		
+		.slider__content {
+			width: 100%;
+			height: 320px;
+		}
+
+		&__arrow {
+			position: absolute;
+			top: unset;
+			bottom: -60px;
+			transform: translateY(-50%);
+			width: 24px;
+    	height: 24px;
+    	background-repeat: no-repeat;
+    	background-size: contain;
+    	transition: all 0.1s ease;
+		
+		&--left{
+			background-image: url("/media/icons/general/arrow-left-slider.svg");
+			left: unset;
+			right: 56px;
+		}
+		
+		&--right{
+			background-image: url("/media/icons/general/arrow-right-slider.svg");
+			right: 24px;
+		}
+
+		&--disabled {
+			pointer-events: none;
+		}
+		
+	}
+	
+}
 
 }
