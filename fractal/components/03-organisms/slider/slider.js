@@ -10,8 +10,12 @@ class Slider {
 			items: document.querySelectorAll('.slider__item'),
 		}
 		this.numberOfItems = document.querySelectorAll('.slider__item').length,
-		this.currentIndex = 0;
+		this.currentIndex = 1;
 		this.animationDuration = 600 / 2;
+		this.swipePositions = {
+			start: null,
+			end: null,
+		};
 		this.init();
 	}
 
@@ -22,6 +26,8 @@ class Slider {
 	addEventListener() {
 		this.elements.arrows.right.addEventListener('click', () => this.countUp());
 		this.elements.arrows.left.addEventListener('click', () => this.countDown());
+		this.elements.content.addEventListener('touchstart', (event) => this.swipeStart(event));
+		this.elements.content.addEventListener('touchend', (event) => this.swipeEnd(event));
 	}
 
 	countUp() {
@@ -70,6 +76,17 @@ class Slider {
 			this.elements.arrows.left.classList.remove('slider__arrow--disabled');
 			this.elements.arrows.right.classList.remove('slider__arrow--disabled');
 		}, this.animationDuration);
+	}
+
+	swipeStart(event) {
+		const position = event.touches[0].clientX;
+		this.swipePositions.start = position;
+	}
+
+	swipeEnd() {
+		const position = event.changedTouches[0].clientX;
+		this.swipePositions.end = position;
+		this.swipePositions.start < this.swipePositions.end ? this.countDown() : this.countUp();
 	}
 
 }
