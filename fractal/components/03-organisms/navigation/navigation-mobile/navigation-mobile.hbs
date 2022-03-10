@@ -8,20 +8,24 @@
 					{{> @hamburger }}
 				</div>
 			
-				<div class="navigation-mobile__panel navigation-mobile__panel--closed" id="panel" type='button'>
-					<div class='navigation-mobile__background-layer' id='background-layer'>
+				<div class="navigation-mobile__panel navigation-mobile__panel--open" type='button'>
+					<div class='navigation-mobile__background-layer'>
 					</div>
-						<div class='navigation-mobile__links links'>												
+						<div class='navigation-mobile__links '>												
 							{{#each links}}
 								{{#if sublinks}}
-									{{> @link-navigation text=text link=link class="links__item links__item--has-childs" }}
+									<span class="navigation-mobile__link link navigation-mobile__link--has-sublinks">
+										{{> @paragraph class="link__item" text=text}}
 										<div class='navigation-mobile__dropdown dropdown'>
 											{{#each sublinks }}
-												{{> @link-navigation text=text link=link class="dropdown__item" }}
+												{{> @link-navigation class="dropdown__item" text=text link=link  }}
 											{{/each}}
 										</div>
-									{{else }}
-										{{> @link-navigation text=text link=link class="links__item" }}
+									</span>
+								{{else }}
+									<span class="navigation-mobile__link link">
+										{{> @link-navigation class="link__item" text=text link=link }}
+									</span>
 								 {{/if}}
 							{{/each}}
 						</div>
