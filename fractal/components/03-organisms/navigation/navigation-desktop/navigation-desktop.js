@@ -1,12 +1,9 @@
 "use strict";
 
-class Navigation {
+class NavigationDesktop {
 
 	constructor() {
 		this.name = 'navigation';
-		// this.aboutLink = document.getElementsByClassName('links__item--has-childs')[0];
-		// this.loginLink = document.getElementsByClassName('links__item--has-childs')[1];
-		// this.init();
 	}
 	
 	init = () => {
@@ -33,4 +30,4 @@ class Navigation {
 
 }
 
-const navigationInstance = new Navigation;
+export default NavigationDesktop;

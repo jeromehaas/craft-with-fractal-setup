@@ -18,6 +18,8 @@ const sass = require('gulp-sass')(require('sass'));
 const favicons = require('gulp-favicons');
 const svgSprite = require('gulp-svg-sprite');
 const gulpCopy = require('gulp-copy');
+const webpackConfig = require('./webpack.config.js');
+const webpackStream = require('webpack-stream');
 
 // SOURCE PATHS
 const filePaths = {
@@ -30,7 +32,7 @@ const filePaths = {
 		dist: ['../craft/web/public/fonts']
 	},
 	js: {
-		src: ['./components/**/**/*.js'],
+		src: ['./public/js/main.js'],
 		dist: ['./public/js', '../craft/web/public/js']
 	},
 	image: {
@@ -100,17 +102,14 @@ const scssTask = (done) => {
 		done();
 	}
 
-	// JS TASK
-	const jsTask = (done) => {
-			gulp.src(filePaths.js.src)
-				.pipe(plumber({ errorHandler: notifier.error }))
-				.pipe(babel({ presets: ['@babel/env'] }))
-				.pipe(concat('main.js'))
-				.pipe(uglify())
-		.pipe(rename({ suffix: '.min' }))
+// JS TASK
+const jsTask = (done) => {
+	gulp.src(filePaths.js.src)
+		.pipe(plumber({ errorHandler: notifier.error }))
+		.pipe(webpackStream(webpackConfig))
 		.pipe(dest(filePaths.js.dist[0]))
 		.pipe(dest(filePaths.js.dist[1]))
-		.pipe(notifier.success('js'))
+		.pipe(notifier.success('js'));
 	done();
 }
 

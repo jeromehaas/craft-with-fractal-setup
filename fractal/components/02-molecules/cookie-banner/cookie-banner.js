@@ -47,4 +47,4 @@ class CookieBanner {
 
 };
 
-new CookieBanner();
+export default CookieBanner;

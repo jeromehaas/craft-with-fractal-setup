@@ -30,4 +30,4 @@ class Range {
 
 };
 
-new Range();
+export default Range;

@@ -1,6 +1,6 @@
 "use strict";
 
-class Navigation {
+class NavigationMobile {
 
 	constructor() {
 		this.name = 'navigation-mobile';
@@ -33,4 +33,4 @@ class Navigation {
 
 };
 
-const navigationInstance = new Navigation;
+export default NavigationMobile;

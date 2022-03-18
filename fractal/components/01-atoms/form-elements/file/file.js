@@ -28,4 +28,4 @@ class File {
 
 }
 
-new File();
+export default File;

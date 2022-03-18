@@ -1,4 +1,4 @@
-class Droppdown {
+class Dropdown {
 	
 	constructor() {
 		this.name = 'dropdown';
@@ -32,4 +32,4 @@ class Droppdown {
 
 };
 
-new Droppdown();
+export default Dropdown;
