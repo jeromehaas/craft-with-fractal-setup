@@ -32,7 +32,7 @@ const filePaths = {
 		dist: ['../craft/web/public/fonts']
 	},
 	js: {
-		src: ['./public/js/main.js'],
+		src: ['./public/js/main.js', './components/**/*.js'],
 		dist: ['./public/js', '../craft/web/public/js']
 	},
 	image: {

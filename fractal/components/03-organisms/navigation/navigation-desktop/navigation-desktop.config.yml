@@ -14,8 +14,8 @@ context:
       link: "/faq"
     - text: Roadmap
       link: "/roadmap"
-  - text: Insights & Blog
-    link: "/blog-overview"
+  - text: Blog
+    link: "/blog"
     sublinks: []
   - text: Login
     sublinks:

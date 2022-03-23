@@ -5,9 +5,9 @@ context:
       - text: Home
         link: "/"
         sublinks: []
-      - text: Über uns
+      - text: About Us
         sublinks:
-        - text: Unternehmen
+        - text: Company
           link: "/company"
         - text: Team
           link: "/team"
@@ -15,12 +15,12 @@ context:
           link: "/faq"
         - text: Roadmap
           link: "/roadmap"
-      - text: Insights & Blog
-        link: "/blog-overview"
+      - text: Blog
+        link: "/blog"
         sublinks: []
       - text: Login
         sublinks:
         - text: Login
           link: "/register"
-        - text: Registrieren
-          link: "/register"
+        - text: Sign Up
+          link: "/signup"
