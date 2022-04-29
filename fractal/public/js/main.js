@@ -5,6 +5,7 @@ import DropdownClass from "../../components/01-atoms/form-elements/dropdown/drop
 import FileClass from "../../components/01-atoms/form-elements/file/file";
 import RangeClass from "../../components/01-atoms/form-elements/range/range";
 import SliderClass from "../../components/03-organisms/slider/slider";
+import Clipper from "../../components/03-organisms/clipper/clipper";
 
 const cookieBanner = new CookieBannerClass();
 const navigationMobile = new NavigationMobileClass();
@@ -13,3 +14,4 @@ const dropdown = new DropdownClass();
 const file = new FileClass();
 const range = new RangeClass();
 const slider = new SliderClass();
+const clipper = new Clipper();

@@ -32,7 +32,7 @@ const filePaths = {
 		dist: ['../craft/web/public/fonts']
 	},
 	js: {
-		src: ['./public/js/main.js'],
+		src: ['./public/js/main.js', './components/**/*.js'],
 		dist: ['./public/js', '../craft/web/public/js']
 	},
 	image: {
@@ -214,4 +214,4 @@ const watchTask = () => {
 }
 
 exports.build = parallel(iconSpriteTask, scssTask, fontTask, jsTask, imageTask, iconTask, graphicTask, faviconTask, lottieTask);
-exports.default = series(exports.build, watchTask);
+exports.default = series(jsTask, scssTask, watchTask);

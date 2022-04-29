@@ -11,6 +11,7 @@
 		"browser-sync": "^2.27.7",
 		"concurrently": "^6.5.1",
 		"del": "^6.0.0",
+		"gsap": "^3.10.4",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",
 		"gulp-babel": "^8.0.0",

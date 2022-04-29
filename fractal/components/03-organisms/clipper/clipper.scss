@@ -1,0 +1,22 @@
+.clipper {
+	border: 10px solid red;
+
+	&__image {
+		display: block;
+		width: 100%;
+		clip-path: inset(0% 10px 10px 10px);
+		transition: all 0.3s ease;
+		clip-path: inset(20% 50% 0% 0%);
+		overflow: hidden;
+	}
+
+}
+
+.placeholder {
+	height: 50vh;
+
+	&--blue { background-color: rgb(86, 86, 249); }
+	&--green { background-color: rgb(23, 233, 139); }
+	&--orange { background-color: rgb(221, 221, 17); }
+	&--red { background-color: rgb(237, 95, 85); }
+}
